@@ -79,16 +79,25 @@ html {
 
 // End of Boostrap responsice fonts
 
-// First Jumbotron with no margin and background image
+// Modals with no border radius
+
+.modal-content  {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+// End of Modals with no border radius
+
+
+// First Jumbotron with background image
  .first-jumbotron {
    // backgorund image
    background-image: url("first-background.jpg");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   // temporary
    min-height: 500px;
-   overflow: auto;
    // center text in jumbotron
    color: $white;
    text-align: center;
@@ -98,7 +107,7 @@ html {
    letter-spacing: 5px;
  }
 
- // End of First Jumbotron with no margin and background image
+ // End of First Jumbotron with background image
 
 
 // Disapear effect for first navbar when scrolling
@@ -108,6 +117,7 @@ html {
     transition: opacity 0.5s ease;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .navbar-hide {
