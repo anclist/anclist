@@ -11,6 +11,38 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ // Variables
+ $dark: rgb(52, 58, 64);
+ $btn-border-radius: 0px;
+ $btn-border-width: 1px;
+ $primary: rgb(67, 69, 113);
+ $secondary: rgb(115, 41, 47);
+ $success: rgb(25, 114, 46);
+ $danger: rgb(217, 62, 48);
+ $info: rgb(217, 107, 43);
+ $warning: rgb(243, 201, 73);
+ $light: rgb(217, 219, 219);
+ $white: rgb(255,255,255);
+ $headings-font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ $font-family-base: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ $table-dark-bg: rgb(66, 66, 66);
+ $pagination-border-width: 2px;
+ $badge-border-radius: 15px;
+ $progress-border-radius: 0px;
+ $jumbotron-bg: rgb(233, 236, 239);
+ $card-border-radius: 0px;
+ $tooltip-border-radius: 7px;
+ $popover-border-width: 1px;
+ $popover-border-radius: 0px;
+ $input-border-radius: 1px;
+ $dropdown-border-radius: 1px;
+ $thumbnail-border-radius: 1px;
+ $nav-pills-border-radius: 0px;
+ $nav-tabs-border-radius: 1px;
+ $navbar-toggler-border-radius: 3px;
+ $link-color: $white;
+ $navbar-dark-color: $white;
+
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
@@ -35,8 +67,9 @@
  // End of First Jumbotron with no margin and background image
 
 
-// Disapear effect for navbar when scrolling
+// Disapear effect for first navbar when scrolling
  .first-navbar {
+    background: $danger;
     opacity: 1;
     transition: opacity 0.5s ease;
 }
@@ -45,13 +78,14 @@
     pointer-events: none;
     opacity: 0;
 }
-// End of Disapear effect for navbar when scrolling
+// End of Disapear effect for first navbar when scrolling
 
 
 // Second navbar sticks to top when scrolling
  .second-navbar {
    position: sticky;
    top: 0;
+   padding: 0 20px;
  }
  // End of Second navbar sticks to top when scrolling
 
@@ -67,6 +101,21 @@
    background: transparentize($primary, 0.5);
  }
  // End of Second navbar cahnges opacity and font color when scrolling
+
+
+// Customizing brand logo
+ .nav-logo {
+   margin: 0;
+   width: 40%;
+   height: 40%;
+ }
+ .second-navbar > a.navbar-brand {
+   margin: 0;
+   padding: 0;
+ }
+
+ // End of Customizing brand logo
+
 
 // Card deck display
  .tech-stack{
