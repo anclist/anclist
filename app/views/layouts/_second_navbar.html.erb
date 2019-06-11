@@ -1,0 +1,25 @@
+<!-- Second navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark second-navbar">
+      <a class="navbar-brand" href="#home-jumbotron">
+        <%= image_tag "anclist_logo.png", alt: "antonio manzanares web development logo", class: "nav-logo" %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#home-jumbotron">Home</a>
+          <a class="nav-item nav-link" href="#tech-stack">Tech Stack</a>
+          <a class="nav-item nav-link" href="#">Projects</a>
+          <a class="nav-item nav-link" href="#about">About</a>
+<!-- Button trigger modal -->
+          <a class="nav-item nav-link" data-toggle="modal" data-target="#contactModal">Contact</a>
+<!-- End of Button trigger modal -->
+        </div>
+      </div>
+    </nav>
+<!-- End of Second navbar -->
+
+<!-- Contact Modal -->
+        <%= render 'contacts/form', contact: @contact %>
+<!-- End of Contact Modal -->

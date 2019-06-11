@@ -25,7 +25,7 @@
  $secondary: rgb(115, 41, 47);
  $success: rgb(25, 114, 46);
  $danger: rgb(255,86,86);
- $info: rgb(217, 107, 43);
+ $info: rgb(217, 103, 4);
  $warning: rgb(243, 201, 73);
  $light: rgb(217, 219, 219);
  $white: rgb(255,255,255);
@@ -49,6 +49,8 @@
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+ @import 'rails_bootstrap_forms';
+
 
  @-ms-viewport{
   width: device-width;
