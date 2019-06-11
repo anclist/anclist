@@ -40,7 +40,7 @@ $(window).scroll(function(e) {
 
     // add/remove class to navbar when scrolling to hide/show
     var scroll = $(window).scrollTop();
-    if (scroll >= 100) {
+    if (scroll >= 150) {
         $('.second-navbar').addClass("navbar-fade");
     } else {
         $('.second-navbar').removeClass("navbar-fade");
