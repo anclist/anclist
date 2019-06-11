@@ -136,6 +136,20 @@
  }
 //  End of Card deck display
 
+// About Jumbotron styling
+
 .about-jumbotron {
   margin: 0;
 }
+
+.tony-thumb-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tony-thumb {
+  max-width: 100%;
+  border-radius: 50%;
+}
+// End of About Jumbotron styling
