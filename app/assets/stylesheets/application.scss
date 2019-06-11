@@ -94,10 +94,10 @@
     background: $primary;
     -webkit-transition: background-color 500ms linear;
     -webkit-transition: color 500ms linear;
-
+    z-index: 1000;
 }
 
- .navbar-fade{
+ .navbar-fade {
    background: transparentize($primary, 0.5);
  }
  // End of Second navbar cahnges opacity and font color when scrolling
@@ -113,11 +113,10 @@
    margin: 0;
    padding: 0;
  }
-
  // End of Customizing brand logo
 
 
-// Card deck display
+// Card deck display grid
  .tech-stack{
    margin-bottom: 10px;
  }
