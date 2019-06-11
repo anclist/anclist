@@ -33,6 +33,9 @@ gem 'bootstrap', '~> 4.3.1'
 # Bootstrap JavaScript depends on jQuery
 gem 'jquery-rails'
 
+# Use Fontawesome for incons
+gem 'font-awesome-sass', '~> 5.8.1'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
