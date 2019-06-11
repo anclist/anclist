@@ -127,6 +127,15 @@
  .card-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: .5rem;
-}
+    // grid-gap: .5rem;
+ }
+
+ .card-deck > .card {
+   margin: 0;
+   border: 0;
+ }
 //  End of Card deck display
+
+.about-jumbotron {
+  margin: 0;
+}
