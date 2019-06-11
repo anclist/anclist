@@ -54,6 +54,31 @@
   width: device-width;
 }
 
+// Boostrap responsice fonts
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.3rem;
+  }
+}
+
+// End of Boostrap responsice fonts
+
 // First Jumbotron with no margin and background image
  .first-jumbotron {
    // backgorund image
