@@ -217,10 +217,10 @@ html {
 
 .come-in {
   transform: translateY(150px);
-  animation: come-in 0.9s ease forwards;
+  animation: come-in 1s ease forwards;
 }
 .come-in:nth-child(odd) {
-  animation-duration: 0.7s; /* So they look staggered */
+  animation-duration: 0.9s; /* So they look staggered */
 }
 
 @keyframes come-in {
