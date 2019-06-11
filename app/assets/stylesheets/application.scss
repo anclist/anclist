@@ -99,7 +99,7 @@ html {
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   min-height: 500px;
+   min-height: 100vh;
    // center text in jumbotron
    color: $white;
    text-align: center;
@@ -198,6 +198,7 @@ html {
 
 .about-jumbotron {
   margin: 0;
+  min-height: 100vh;
 }
 
 .tony-thumb-container {
@@ -211,3 +212,18 @@ html {
   border-radius: 50%;
 }
 // End of About Jumbotron styling
+
+// Tech stack cards slide up as user scrolls
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.9s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.7s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+// End of Tech stack cards slide up as user scrolls
