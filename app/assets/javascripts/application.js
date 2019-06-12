@@ -18,6 +18,22 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+// Set the height of the first jumbotron at the diferrence of the window size minus the navbars height
+
+$(function() {
+  var $firstNavHeight = $('#fisrt-navbar').outerHeight(true);
+  var $secondNavHeight = $('#second-navbar').outerHeight(true);
+  var $mainJumbotron = $('#home-jumbotron');
+  var $windowHeight = $(window).height();
+
+
+    $(document).ready(function() {
+      modHeight = $windowHeight - ($firstNavHeight + $secondNavHeight);
+      $mainJumbotron.outerHeight(modHeight)
+  });
+});
+
+// End of Set the height of the first jumbotron at the diferrence of the window size minus the navbars height
 
 // scroll functions navbar disapear when scrolling
 $(window).scroll(function(e) {
