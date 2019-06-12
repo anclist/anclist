@@ -61,9 +61,20 @@ html {
   font-size: 0.9rem;
 }
 
+// Tech stack icons
+.tech-stack-icon {
+  font-size: 4rem;
+  margin-bottom: 8px;
+}
+// End of Tech stack icons
+
+
 @include media-breakpoint-up(sm) {
   html {
     font-size: 1rem;
+  }
+  .tech-stack-icon {
+    font-size: 5rem;
   }
 }
 
@@ -71,12 +82,20 @@ html {
   html {
     font-size: 1.1rem;
   }
+  .tech-stack-icon {
+    font-size: 6rem;
+  }
+
 }
 
 @include media-breakpoint-up(lg) {
   html {
     font-size: 1.2rem;
   }
+  .tech-stack-icon {
+    font-size: 7rem;
+  }
+
 }
 
 // End of Boostrap responsice fonts
@@ -187,12 +206,6 @@ html {
  }
 //  End of Card deck display
 
-// Tech stack icons
-.tech-stack-icon {
-  font-size: 8rem;
-  margin-bottom: 8px;
-}
-// End of Tech stack icons
 
 // About Jumbotron styling
 
