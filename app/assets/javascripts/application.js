@@ -77,8 +77,12 @@ $('a[href*="#"]')
 $(document).ready(function(e){
   var socialToggle = $("#social-toggle");
   var firstNavbar = $("#fisrt-navbar");
+  var closeSocial = $("#close-social-icons")
 
   socialToggle.click(function(){
     firstNavbar.toggleClass("show-side-bar");
+  });
+  closeSocial.click(function(){
+    firstNavbar.removeClass("show-side-bar");
   });
 });
