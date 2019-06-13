@@ -18,40 +18,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-// Set the height of the first jumbotron at the diferrence of the window size minus the navbars height
+// Navbar fades color when scrolling
 
-$(function() {
-  var $firstNavHeight = $('#fisrt-navbar').outerHeight(true);
-  var $secondNavHeight = $('#second-navbar').outerHeight(true);
-  var $mainJumbotron = $('#home-jumbotron');
-  var $windowHeight = $(window).height();
-
-
-    $(document).ready(function() {
-      modHeight = $windowHeight - ($firstNavHeight + $secondNavHeight);
-      $mainJumbotron.outerHeight(modHeight)
-  });
-});
-
-// End of Set the height of the first jumbotron at the diferrence of the window size minus the navbars height
-
-// scroll functions navbar disapear when scrolling
-$(window).scroll(function(e) {
-
-    // add/remove class to navbar when scrolling to hide/show
-    var scroll = $(window).scrollTop();
-    if (scroll >= 160) {
-        $('.first-navbar').addClass("navbar-hide");
-    } else {
-        $('.first-navbar').removeClass("navbar-hide");
-    }
-
-});
-
-// End of scroll functions navbar disapear when scrolling
-
-
-// scroll functions navbar disapear when scrolling
 $(window).scroll(function(e) {
 
     // add/remove class to navbar when scrolling to hide/show
@@ -64,56 +32,44 @@ $(window).scroll(function(e) {
 
 });
 
-// End of scroll functions navbar disapear when scrolling
+// End of Navbar fades color when scrolling
 
-// Tech stack cards slide up as user scrolls
-(function($) {
-  $.fn.visible = function(partial) {
+// Jquey smooth scrolling
 
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
-
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-  };
-
-})(jQuery);
-
-$(window).scroll(function(event) {
-
-  $(".card").each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in");
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
     }
   });
-
-});
-
-var win = $(window);
-var allMods = $(".card");
-
-// Already visible modules
-allMods.each(function(i, el) {
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass("already-visible");
-  }
-});
-
-win.scroll(function(event) {
-
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in");
-    }
-  });
-
-});
-// End of Tech stack cards slide up as user scrolls
+// End of Jquey smooth scrolling

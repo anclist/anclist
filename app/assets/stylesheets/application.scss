@@ -56,17 +56,25 @@
   width: device-width;
 }
 
-// Boostrap responsice fonts
+html {
+  height: 100vh;
+}
+
+.section {
+  height: 100vh;
+  overflow: auto;
+}
+
+// Boostrap and Tech stack icons responsice fonts
 html {
   font-size: 0.9rem;
 }
 
-// Tech stack icons
+//
 .tech-stack-icon {
   font-size: 4rem;
   margin-bottom: 8px;
 }
-// End of Tech stack icons
 
 
 @include media-breakpoint-up(sm) {
@@ -98,7 +106,7 @@ html {
 
 }
 
-// End of Boostrap responsice fonts
+// End of Boostrap and Tech stack icons responsice fonts
 
 // Modals with no border radius
 
@@ -111,70 +119,23 @@ html {
 // End of Modals with no border radius
 
 
-// First Jumbotron with background image
- .first-jumbotron {
-   // backgorund image
-   background-image: image-url("first-background.jpg");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   margin: 0;
-   height: 100vh;
-   // center text in jumbotron
-   color: $white;
-   text-align: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   letter-spacing: 5px;
- }
-
- // End of First Jumbotron with background image
-
-
-// Disapear effect for first navbar when scrolling
- .first-navbar {
-    background: $danger;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-}
-
-.navbar-hide {
-    pointer-events: none;
-    opacity: 0;
-}
-// End of Disapear effect for first navbar when scrolling
-
-// Social Icons style
- .social-icon {
-   font-size: 1.5rem;
- }
- // End of Social Icons style
-
-// Second navbar sticks to top when scrolling
- .second-navbar {
-   position: sticky;
+// Second navbar cahnges opacity and font color when scrolling
+.second-navbar {
+   background: $primary;
+   -webkit-transition: background-color 500ms linear;
+   -webkit-transition: color 500ms linear;
+   width: 100%;
+   z-index: 1000;
+   position: fixed;
    top: 0;
-   padding: 0 20px;
- }
- // End of Second navbar sticks to top when scrolling
 
- // Second navbar cahnges opacity and font color when scrolling
- .second-navbar {
-    background: $primary;
-    -webkit-transition: background-color 500ms linear;
-    -webkit-transition: color 500ms linear;
-    z-index: 1000;
 }
 
- .navbar-fade {
-   background: transparentize($primary, 0.5);
- }
- // End of Second navbar cahnges opacity and font color when scrolling
+.navbar-fade {
+  background: transparentize($primary, 0.5);
+}
+// End of Second navbar cahnges opacity and font color when scrolling
+
 
 
 // Customizing brand logo
@@ -190,21 +151,61 @@ html {
  // End of Customizing brand logo
 
 
+
+
+// First Jumbotron with background image
+ .first-jumbotron {
+   // backgorund image
+   background-image: image-url("first-background.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin: 0;
+   // center text in jumbotron
+   color: $white;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   letter-spacing: 5px;
+ }
+
+ // End of First Jumbotron with background image
+
+ .first-jumbotron-container {
+   margin: 0;
+   padding: 0;
+ }
+
+
+// Social Icons style
+ .social-icon {
+   font-size: 1.5rem;
+ }
+ // End of Social Icons style
+
+
 // Card deck display grid
  .tech-stack{
-   margin-bottom: 10px;
    padding: 20px;
+   text-align: center;
  }
 
  .card-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    align-items: center;
+    align-content: space-between;
     // grid-gap: .5rem;
  }
 
  .card-deck > .card {
    margin: 0;
    border: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    text-align: center;
  }
 //  End of Card deck display
@@ -216,29 +217,11 @@ html {
   margin: 0;
 }
 
-.tony-thumb-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about-grid-container {
+  display: grid;
 }
-
 .tony-thumb {
   max-width: 100%;
   border-radius: 50%;
 }
 // End of About Jumbotron styling
-
-// Tech stack cards slide up as user scrolls
-
-.come-in {
-  transform: translateY(150px);
-  animation: come-in 1s ease forwards;
-}
-.come-in:nth-child(odd) {
-  animation-duration: 0.9s; /* So they look staggered */
-}
-
-@keyframes come-in {
-  to { transform: translateY(0); }
-}
-// End of Tech stack cards slide up as user scrolls
