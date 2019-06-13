@@ -24,10 +24,10 @@ $(window).scroll(function(e) {
 
     // add/remove class to navbar when scrolling to hide/show
     var scroll = $(window).scrollTop();
-    if (scroll >= 150) {
-        $('.second-navbar').addClass("navbar-fade");
+    if (scroll >= 2) {
+        $('#second-navbar').addClass("navbar-fade");
     } else {
-        $('.second-navbar').removeClass("navbar-fade");
+        $('#second-navbar').removeClass("navbar-fade");
     }
 
 });
@@ -73,3 +73,12 @@ $('a[href*="#"]')
     }
   });
 // End of Jquey smooth scrolling
+
+$(document).ready(function(e){
+  var socialToggle = $("#social-toggle");
+  var firstNavbar = $("#fisrt-navbar");
+
+  socialToggle.click(function(){
+    firstNavbar.toggleClass("show-side-bar");
+  });
+});
