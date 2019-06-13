@@ -74,15 +74,18 @@ $('a[href*="#"]')
   });
 // End of Jquey smooth scrolling
 
-$(document).ready(function(e){
+$(document).ready(function(){
   var socialToggle = $("#social-toggle");
   var firstNavbar = $("#fisrt-navbar");
-  var closeSocial = $("#close-social-icons")
+  var closeSocial = $("#close-social-icons");
 
-  socialToggle.click(function(){
+
+  socialToggle.click(function(e){
+    e.preventDefault();
     firstNavbar.toggleClass("show-side-bar");
   });
-  closeSocial.click(function(){
+  closeSocial.click(function(e){
+    e.preventDefault();
     firstNavbar.removeClass("show-side-bar");
   });
 });
