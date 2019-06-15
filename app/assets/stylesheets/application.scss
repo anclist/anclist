@@ -52,123 +52,112 @@
  @import 'rails_bootstrap_forms';
 
 
- @-ms-viewport{
-  width: device-width;
-}
+ @-ms-viewport {
+   width: device-width;
+ }
 
-html {
-  height: 100vh;
-}
+ html {
+   height: 100vh;
+ }
 
-.section {
-  height: 100vh;
-  overflow: scroll;
-}
+ .section {
+   height: 100vh;
+   overflow: scroll;
+ }
 
-// Boostrap and Tech stack icons responsice fonts
-html {
-  font-size: 0.9rem;
-}
+ // Boostrap and Tech stack icons responsice fonts
+ html {
+   font-size: 0.9rem;
+ }
 
-//
-.tech-stack-icon {
-  font-size: 4rem;
-  margin-bottom: 8px;
-}
+ //
+ .tech-stack-icon {
+   font-size: 4rem;
+   margin-bottom: 8px;
+ }
 
+ @include media-breakpoint-up(sm) {
+   html {
+     font-size: 1rem;
+   }
+   .tech-stack-icon {
+     font-size: 5rem;
+   }
+ }
 
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1rem;
-  }
-  .tech-stack-icon {
-    font-size: 5rem;
-  }
-}
+ @include media-breakpoint-up(md) {
+   html {
+     font-size: 1.1rem;
+   }
+   .tech-stack-icon {
+     font-size: 6rem;
+   }
+ }
 
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.1rem;
-  }
-  .tech-stack-icon {
-    font-size: 6rem;
-  }
+ @include media-breakpoint-up(lg) {
+   html {
+     font-size: 1.2rem;
+   }
+   .tech-stack-icon {
+     font-size: 7rem;
+   }
+ }
 
-}
+ // End of Boostrap and Tech stack icons responsice fonts
+ // Modals with no border radius
+ .modal-content {
+   -webkit-border-radius: 0px !important;
+   -moz-border-radius: 0px !important;
+   border-radius: 0px !important;
+ }
 
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.2rem;
-  }
-  .tech-stack-icon {
-    font-size: 7rem;
-  }
+ // End of Modals with no border radius
+ .first-navbar {
+   position: fixed;
+   background: $danger;
+   top: calc(100vh / 2);
+   left: -100px;
+   z-index: 100000;
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   transition: all 300ms linear;
+   transform: translate(0, -50%);
+ }
 
-}
+ .show-side-bar {
+   left: -10px;
+ }
 
-// End of Boostrap and Tech stack icons responsice fonts
-
-// Modals with no border radius
-
-.modal-content  {
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
-    border-radius: 0px !important;
-}
-
-// End of Modals with no border radius
-
-.first-navbar {
-  position: fixed;
-  background: $danger;
-  top: calc(100vh / 2);
-  left: -100px;
-  z-index: 100000;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  transition: all 300ms linear;
-}
-
-.show-side-bar {
-  left: -10px;
-}
-
-
-// Second navbar cahnges opacity and font color when scrolling
-.second-navbar {
+ // Second navbar cahnges opacity and font color when scrolling
+ .second-navbar {
    background: $primary;
    transition: background-color 1s linear;
    width: 100%;
    z-index: 1000;
    position: fixed;
    top: 0;
+ }
 
-}
+ .navbar-fade {
+   background: transparentize($primary, 0.5);
+ }
 
-.navbar-fade {
-  background: transparentize($primary, 0.5);
-}
-// End of Second navbar cahnges opacity and font color when scrolling
-
-
-
-// Customizing brand logo
+ // End of Second navbar cahnges opacity and font color when scrolling
+ // Customizing brand logo
  .nav-logo {
    margin: 0;
    width: 40%;
    height: 40%;
  }
- .second-navbar > a.navbar-brand {
+
+ .second-navbar>a.navbar-brand {
    margin: 0;
    padding: 0;
  }
+
  // End of Customizing brand logo
-
-
-
-
-// First Jumbotron with background image
+ // First Jumbotron with background image
  .first-jumbotron {
    // backgorund image
    background-image: image-url("first-background.jpg");
@@ -186,9 +175,7 @@ html {
  }
 
  // End of First Jumbotron with background image
-
-
-// Social Icons style
+ // Social Icons style
  .social-icon {
    font-size: 1.5rem;
    margin: 2px;
@@ -199,25 +186,24 @@ html {
    color: $white;
    margin-bottom: 8px;
  }
+
  // End of Social Icons style
-
-
-// Card deck display grid
- .tech-stack{
+ // Card deck display grid
+ .tech-stack {
    padding: 20px;
    text-align: center;
  }
 
  .card-deck {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
-    align-items: center;
-    align-content: space-between;
-    // grid-gap: .5rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   justify-items: center;
+   align-items: center;
+   align-content: space-between;
+   // grid-gap: .5rem;
  }
 
- .card-deck > .card {
+ .card-deck>.card {
    margin: 0;
    border: 0;
    display: flex;
@@ -225,21 +211,21 @@ html {
    align-items: center;
    text-align: center;
  }
-//  End of Card deck display
 
+ //  End of Card deck display
+ // About Jumbotron styling
+ .about-jumbotron {
+   margin: 0;
+   z-index: 999;
+ }
 
-// About Jumbotron styling
+ .about-grid-container {
+   display: grid;
+ }
 
-.about-jumbotron {
-  margin: 0;
-  z-index: 999;
-}
+ .tony-thumb {
+   max-width: 100%;
+   border-radius: 50%;
+ }
 
-.about-grid-container {
-  display: grid;
-}
-.tony-thumb {
-  max-width: 100%;
-  border-radius: 50%;
-}
-// End of About Jumbotron styling
+ // End of About Jumbotron styling
