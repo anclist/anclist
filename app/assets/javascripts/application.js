@@ -90,6 +90,20 @@ $(document).ready(function() {
   e.preventDefault();
   firstNavbar.toggleClass("show-side-bar");
  });
+
+ // Hide navbar if clicked outside of it
+ $(document).mouseup(function (e)
+                    {
+  var container = firstNavbar; // YOUR CONTAINER SELECTOR
+
+  if (!container.is(e.target) // if the target of the click isn't the container...
+      && container.has(e.target).length === 0) // ... nor a descendant of the container
+  {
+    firstNavbar.removeClass("show-side-bar");
+  }
+});
+
+ // End of Hide navbar if clicked outside of it
  // End of show or hide social media navbar
 
 });
