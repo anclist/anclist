@@ -62,8 +62,7 @@
  }
 
  .section {
-   height: 100vh;
-   overflow: scroll;
+   min-height: 100vh;
  }
 
  // Boostrap and Tech stack icons responsice fonts
@@ -133,9 +132,9 @@
  // End of First Navbar Style and animation
 
 
- // Second navbar cahnges opacity and font color when scrolling
+ // Second navbar changes opacity and font color when scrolling
  .second-navbar {
-   background: $primary;
+   background: rgba(67, 69, 113, 0);
    transition: background-color 1s linear;
    width: 100%;
    z-index: 1000;
@@ -146,7 +145,7 @@
  .navbar-fade {
    background: transparentize($primary, 0.5);
  }
- // End of Second navbar cahnges opacity and font color when scrolling
+ // End of Second navbar changes opacity and font color when scrolling
 
 
  // Animate Social nav-item
@@ -229,6 +228,7 @@
  // About Jumbotron styling
  .about-jumbotron {
    margin: 0;
+   background: $white;
    z-index: 999;
  }
 

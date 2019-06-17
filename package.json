@@ -1,5 +1,7 @@
 {
   "name": "anclist",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-scrollify": "^1.0.20"
+  }
 }

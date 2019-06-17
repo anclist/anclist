@@ -14,16 +14,16 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require jquery-scrollify
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
 
-// Navbar fades color when scrolling
 
 $(document).ready(function() {
 
+  // Navbar fades color when scrolling
  $(window).scroll(function(e) {
-
   // add/remove class to navbar when scrolling to hide/show
   var scroll = $(window).scrollTop();
   if (scroll >= 2) {
@@ -31,52 +31,12 @@ $(document).ready(function() {
   } else {
    $('#second-navbar').removeClass("navbar-fade");
   }
-
  });
-
  // End of Navbar fades color when scrolling
 
- // Jquey smooth scrolling
 
- // Select all links with hashes
- $('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-   // On-page links
-   if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-    location.hostname == this.hostname
-   ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-     // Only prevent default if animation is actually gonna happen
-     event.preventDefault();
-     $('html, body').animate({
-      scrollTop: target.offset().top
-     }, 1000, function() {
-      // Callback after animation
-      // Must change focus!
-      var $target = $(target);
-      $target.focus();
-      if ($target.is(":focus")) { // Checking if the target was focused
-       return false;
-      } else {
-       $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-       $target.focus(); // Set focus again
-      };
-     });
-    }
-   }
-  });
- // End of Jquey smooth scrolling
 
  // Show or hide social media navbar
-
  var socialToggle = $("#social-toggle");
  var firstNavbar = $("#fisrt-navbar");
  var closeSocial = $("#close-social-icons");
@@ -90,20 +50,6 @@ $(document).ready(function() {
   e.preventDefault();
   firstNavbar.toggleClass("show-side-bar");
  });
-
- // Hide navbar if clicked outside of it
- $(document).click(function (e)
-                    {
-  var container = firstNavbar; // YOUR CONTAINER SELECTOR
-
-  if (!container.is(e.target) // if the target of the click isn't the container...
-      && container.has(e.target).length === 0) // ... nor a descendant of the container
-  {
-    firstNavbar.removeClass("show-side-bar");
-  }
-});
-
- // End of Hide navbar if clicked outside of it
  // End of Show or hide social media navbar
 
 // Toggle social animation every 5 seconds
@@ -116,5 +62,49 @@ $(document).ready(function() {
    },2000);
 },5000);
 // End of Toggle social animation every 5 seconds
+
+// Scrollify setup and navigation
+
+$(function () {
+  $.scrollify({
+      section : ".section",
+      sectionName : "section-name",
+      interstitialSection : ".footer",
+      easing: "easeOutExpo",
+      scrollSpeed: 1100,
+      offset : 0,
+      scrollbars: false,
+      standardScrollElements: "",
+      setHeights: true,
+      overflowScroll: true,
+      updateHash: true,
+      touchScroll:true,
+      before:function() {},
+      after:function() {},
+      afterResize:function() {},
+      afterRender:function() {}
+    });
+});
+
+  $("#home-link").click(function(e){
+     e.preventDefault()
+     $.scrollify.move(0);
+  });
+
+  $("#tech-link").click(function(e){
+     e.preventDefault()
+     $.scrollify.move(1);
+  });
+
+  $("#projects-link").click(function(e){
+     e.preventDefault()
+     $.scrollify.move(2);
+  });
+
+  $("#about-link").click(function(e){
+     e.preventDefault()
+     $.scrollify.move(3);
+  });
+  // End of Scrollify setup and navigation
 
 });
