@@ -117,5 +117,4 @@ $(document).ready(function() {
 },5000);
 // End of Toggle social animation every 5 seconds
 
-
 });
