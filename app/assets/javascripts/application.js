@@ -75,7 +75,7 @@ $(document).ready(function() {
   });
  // End of Jquey smooth scrolling
 
- // show or hide social media navbar
+ // Show or hide social media navbar
 
  var socialToggle = $("#social-toggle");
  var firstNavbar = $("#fisrt-navbar");
@@ -92,7 +92,7 @@ $(document).ready(function() {
  });
 
  // Hide navbar if clicked outside of it
- $(document).mouseup(function (e)
+ $(document).click(function (e)
                     {
   var container = firstNavbar; // YOUR CONTAINER SELECTOR
 
@@ -104,6 +104,18 @@ $(document).ready(function() {
 });
 
  // End of Hide navbar if clicked outside of it
- // End of show or hide social media navbar
+ // End of Show or hide social media navbar
+
+// Toggle social animation every 5 seconds
+ setInterval(function(){
+   // toggle the class every five second
+   $('#social-toggle').toggleClass('animated swing bigger-social');
+   setTimeout(function(){
+     // toggle back after 1 second
+     $('#social-toggle').toggleClass('animated swing bigger-social');
+   },2000);
+},5000);
+// End of Toggle social animation every 5 seconds
+
 
 });

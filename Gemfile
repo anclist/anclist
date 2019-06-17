@@ -39,6 +39,9 @@ gem 'font-awesome-sass', '~> 5.8.1'
 # Use Bootstrap Form to generate the correct classes
 gem "bootstrap_form", ">= 4.2.0"
 
+# Use animate.css for general animations
+gem "animate-rails"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

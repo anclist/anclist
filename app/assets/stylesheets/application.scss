@@ -14,6 +14,7 @@
  // GOOGLE FONTS
  $font-family-base: 'Inconsolata', monospace;
  $headings-font-family: 'Inconsolata', monospace;
+ @import 'animate';
  @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
  @import "font-awesome-sprockets";
  @import "font-awesome";
@@ -102,16 +103,17 @@
      font-size: 7rem;
    }
  }
-
  // End of Boostrap and Tech stack icons responsice fonts
+
  // Modals with no border radius
  .modal-content {
    -webkit-border-radius: 0px !important;
    -moz-border-radius: 0px !important;
    border-radius: 0px !important;
  }
-
  // End of Modals with no border radius
+
+ // First Navbar Style and animation
  .first-navbar {
    position: fixed;
    background: $danger;
@@ -128,6 +130,8 @@
  .show-side-bar {
    left: -10px;
  }
+ // End of First Navbar Style and animation
+
 
  // Second navbar cahnges opacity and font color when scrolling
  .second-navbar {
@@ -142,8 +146,16 @@
  .navbar-fade {
    background: transparentize($primary, 0.5);
  }
-
  // End of Second navbar cahnges opacity and font color when scrolling
+
+
+ // Animate Social nav-item
+ #social-toggle {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+// Ennd of Animate Social nav-item
+
  // Customizing brand logo
  .nav-logo {
    margin: 0;
@@ -157,6 +169,7 @@
  }
 
  // End of Customizing brand logo
+
  // First Jumbotron with background image
  .first-jumbotron {
    // backgorund image
