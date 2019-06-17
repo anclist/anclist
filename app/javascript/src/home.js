@@ -64,6 +64,11 @@ $(function () {
     });
 });
 
+  $("#logo-link").click(function(e){
+     e.preventDefault()
+     $.scrollify.move(0);
+  });
+
   $("#home-link").click(function(e){
      e.preventDefault()
      $.scrollify.move(0);
