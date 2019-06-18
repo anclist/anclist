@@ -154,7 +154,7 @@
 
  // Second navbar changes opacity and font color when scrolling
  .second-navbar {
-   background: rgba(67, 69, 113, 0);
+   background: rgba(0, 0, 0, 0);
    transition: background-color 1s linear;
    width: 100%;
    z-index: 1000;
@@ -170,8 +170,14 @@
  // Customizing brand logo
  .nav-logo {
    margin: 0;
-   width: 40%;
-   height: 40%;
+   width: 100px;
+   height: 100px;
+   transition: 1s;
+ }
+
+ .shrink-logo {
+   width: 60px;
+   height: 60px;
  }
 
  .second-navbar>a.navbar-brand {

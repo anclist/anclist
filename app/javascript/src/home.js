@@ -6,8 +6,10 @@ $(document).ready(function() {
   var scroll = $(window).scrollTop();
   if (scroll >= 2) {
    $('#second-navbar').addClass("navbar-fade");
+   $('.nav-logo').addClass("shrink-logo");
   } else {
    $('#second-navbar').removeClass("navbar-fade");
+   $('.nav-logo').removeClass("shrink-logo");
   }
  });
  // End of Navbar fades color when scrolling
