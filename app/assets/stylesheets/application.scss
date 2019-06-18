@@ -30,6 +30,7 @@
  $warning: rgb(243, 201, 73);
  $light: rgb(217, 219, 219);
  $white: rgb(255,255,255);
+ $black: rgb(0,0,0);
  $table-dark-bg: rgb(66, 66, 66);
  $pagination-border-width: 2px;
  $badge-border-radius: 15px;
@@ -75,6 +76,22 @@
    font-size: 4rem;
    margin-bottom: 8px;
  }
+
+ #back-to-top{
+   position: fixed;
+   right: 2rem;
+   bottom: 2rem;
+   color: $white;
+   background: rgba($black, 0.5);
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: translate(0, -50%);
+ }
+
 
  @include media-breakpoint-up(sm) {
    html {
@@ -153,7 +170,7 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-// Ennd of Animate Social nav-item
+// End of Animate Social nav-item
 
  // Customizing brand logo
  .nav-logo {
@@ -212,7 +229,6 @@
    justify-items: center;
    align-items: center;
    align-content: space-between;
-   // grid-gap: .5rem;
  }
 
  .card-deck>.card {

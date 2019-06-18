@@ -33,10 +33,10 @@ $(document).ready(function() {
 // Toggle social animation every 5 seconds
  setInterval(function(){
    // toggle the class every five second
-   $('#social-toggle').toggleClass('animated swing bigger-social');
+   socialToggle.toggleClass('animated pulse');
    setTimeout(function(){
      // toggle back after 1 second
-     $('#social-toggle').toggleClass('animated swing bigger-social');
+     socialToggle.toggleClass('animated pulse');
    },2000);
 },5000);
 // End of Toggle social animation every 5 seconds
@@ -64,12 +64,8 @@ $(function () {
     });
 });
 
-  $("#logo-link").click(function(e){
-     e.preventDefault()
-     $.scrollify.move(0);
-  });
 
-  $("#home-link").click(function(e){
+  $("#logo-link, #home-link, #back-to-top").click(function(e){
      e.preventDefault()
      $.scrollify.move(0);
   });
