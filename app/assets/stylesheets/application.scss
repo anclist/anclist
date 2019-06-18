@@ -135,7 +135,8 @@
    position: fixed;
    background: $danger;
    top: calc(100vh / 2);
-   left: -100px;
+   width: 52px;
+   left: -42px;
    z-index: 100000;
    display: flex;
    flex-direction: column;
@@ -164,14 +165,6 @@
    background: transparentize($primary, 0.5);
  }
  // End of Second navbar changes opacity and font color when scrolling
-
-
- // Animate Social nav-item
- #social-toggle {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-// End of Animate Social nav-item
 
  // Customizing brand logo
  .nav-logo {
@@ -205,19 +198,14 @@
  }
 
  // End of First Jumbotron with background image
+
  // Social Icons style
  .social-icon {
    font-size: 1.5rem;
    margin: 2px;
  }
-
- #close-social-icons {
-   font-size: 1rem;
-   color: $white;
-   margin-bottom: 8px;
- }
-
  // End of Social Icons style
+ 
  // Card deck display grid
  .tech-stack {
    padding: 20px;

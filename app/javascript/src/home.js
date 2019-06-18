@@ -14,32 +14,21 @@ $(document).ready(function() {
 
 
 
+
  // Show or hide social media navbar
- var socialToggle = $("#social-toggle");
  var firstNavbar = $("#fisrt-navbar");
- var closeSocial = $("#close-social-icons");
 
-
- socialToggle.click(function(e) {
-  e.preventDefault();
-  firstNavbar.toggleClass("show-side-bar");
- });
- closeSocial.click(function(e) {
-  e.preventDefault();
-  firstNavbar.toggleClass("show-side-bar");
- });
+ $(function() {
+   $("body").click(function(e) {
+     if (e.target.id == "fisrt-navbar" || $(e.target).parents("#fisrt-navbar").length) {
+       firstNavbar.addClass("show-side-bar");
+     } else {
+       firstNavbar.removeClass("show-side-bar");
+     }
+   });
+ })
  // End of Show or hide social media navbar
 
-// Toggle social animation every 5 seconds
- setInterval(function(){
-   // toggle the class every five second
-   socialToggle.toggleClass('animated pulse');
-   setTimeout(function(){
-     // toggle back after 1 second
-     socialToggle.toggleClass('animated pulse');
-   },2000);
-},5000);
-// End of Toggle social animation every 5 seconds
 
 // Scrollify setup and navigation
 
