@@ -40,7 +40,7 @@ $(function () {
       easing: "easeOutExpo",
       scrollSpeed: 1100,
       offset : 0,
-      scrollbars: false,
+      scrollbars: true,
       standardScrollElements: "",
       setHeights: true,
       overflowScroll: true,
