@@ -28,7 +28,17 @@ $(document).ready(function() {
        firstNavbar.removeClass("show-side-bar");
      }
    });
- })
+ });
+
+  var timesRun = 0;
+  var interval = setInterval(function(){
+      timesRun += 1;
+      if(timesRun === 2){
+          clearInterval(interval);
+      }
+      firstNavbar.toggleClass("show-side-bar");
+}, 5000);
+
  // End of Show or hide social media navbar
 
 
